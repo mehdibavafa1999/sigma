@@ -24,13 +24,14 @@ def check_conditions(df):
     return df[condition]
 
 # ✅ 3. Send Signal to Telegram
-BOT_TOKEN = "8141957926:AAEatf_icABoG_-N-y22pHGEnKlKNMVekFc"   # Replace with your bot token
-USERNAME = "@mehdibavafa"      # Telegram username
+CHAT_ID = -4683629172  # Replace with your actual chat ID (an integer)
 
 def send_telegram_message(message):
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-    data = {"chat_id": USERNAME, "text": message, "parse_mode": "HTML"}
-    requests.post(url, data=data)
+    url = f"https://api.telegram.org/bot8141957926:AAEatf_icABoG_-N-y22pHGEnKlKNMVekFc/sendMessage"
+    data = {"-4683629172": CHAT_ID, "text": message, "parse_mode": "HTML"}
+    response = requests.post(url, data=data)
+    print(response.json())  # For debugging, to see if the message was sent
+
 
 # ✅ 4. Main Process (Runs Every 15 Minutes)
 def process():
