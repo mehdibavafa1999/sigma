@@ -24,7 +24,7 @@ def check_conditions(df):
     return df[condition]
 
 # ✅ 3. Send Signal to Telegram
-BOT_TOKEN = "your_bot_token"   # Replace with your bot token
+BOT_TOKEN = "8141957926:AAEatf_icABoG_-N-y22pHGEnKlKNMVekFc"   # Replace with your bot token
 USERNAME = "@mehdibavafa"      # Telegram username
 
 def send_telegram_message(message):
